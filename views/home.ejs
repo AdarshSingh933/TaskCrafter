@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            <%= 'TO DO APP' %>
+        </title>
+        <script src="https://kit.fontawesome.com/86bfd4f27e.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="/css/home.css">
+        
+    </head>
+    <body>
+        <div class="box">
+            <h1 id="page-heading">TODO App</h1>
+        </div>
+         <div class="input-container">
+           <form action="/create-list" method="post">
+            <div class="box">
+                <p>Description</p>
+                <textarea name="description" id="description"></textarea>
+            </div>
+            <div class="category-dueDate box">
+               <div id="category" class="category">
+                <p>Category</p>
+                <select name="category">
+                    <option value="personal" selected>personal</option>
+                    <option value="work">work</option>
+                    <option value="school">school</option>
+                    <option value="cleaning">cleaning</option>
+                    <option value="others">others</option>
+                  </select>
+               </div>
+               <div id="due-date" class="due-date">
+                <label for="dateInput">Due Date</label>
+                <input type="text" id="dateInput" placeholder="dd/mm/yyyy" name="dueDate">
+              </div>
+              </div>
+        <div id="button-container" class="box">
+            <button type="submit" id="add-task" class="button"><i class="fa-sharp fa-solid fa-plus icon"></i> ADD TASK </button>
+            <button id="delete-task" class="button"><i class="fa-solid fa-trash-can icon"></i> DELETE TASKS </button>
+        </div>
+           </form>
+        </div>
+        <div id="task-list-container">
+            <% for (let task of task_list ) { %>
+                <div class="box flex-center">
+                <input type="checkbox" class="task-checkbox" data-id="<%= task._id %>">
+                <div class="description-dueDate">
+                    <p><%= task.description %></p>
+                    <div class="task-due-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <%= task.dueDate %>
+                    </div>
+                </div>
+                <div class="task-list-category">
+                    <%= task.category %>
+                </div>
+                </div>   
+             <% } %>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="/js/home.js"></script>
+    </body>
+</html>

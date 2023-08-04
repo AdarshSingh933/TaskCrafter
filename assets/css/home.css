@@ -1,0 +1,116 @@
+body{
+    color:grey;
+}
+p{
+    margin: 0;
+}
+.box{
+    height: 65px;
+    border-bottom: 1px solid rgb(199 187 187);
+}
+#page-heading{
+text-align: center;
+}
+#description{
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+.category-dueDate{
+    display: flex;
+}
+#category{
+    width: 50%;
+}
+#category select{
+    height: 36px;
+    width: 95%;
+    border: none;
+}
+#due-date{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    border-left: 1px solid rgb(199 187 187);
+    padding-left: 7px;
+}
+#button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 108px;
+}
+#dateInput{
+    border: none;
+    outline: none;
+    height: 40px;
+}
+.button{
+    color: white;
+    height: 35px;
+    width: 130px;
+    margin: 3px;
+    border: none;
+}
+#add-task{
+    background-color: grey;
+}
+#delete-task{
+    background-color: rgb(212, 104, 104);
+}
+.flex-center{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.task-checkbox{
+    position: relative;
+    top: -20px;
+}
+.description-dueDate{
+    position: absolute;
+    left: 42px;
+}
+.description-dueDate p{
+    font-family: sans-serif;
+    font-size: small;
+    font-weight: 700;
+    letter-spacing: 1px
+}
+.task-due-date{
+    font-size: 13px;
+    margin-top: 6px
+}
+.fa-calendar-days{
+    margin-right: 3px;
+}
+.task-list-category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-align: center;
+    height: 40px;
+}
+.personal{
+    background-color: purple;
+    color: white;
+}
+.work{
+    background-color: blueviolet;
+    color: white;
+}
+.school{
+    background-color: yellowgreen;
+    color: white;
+}
+.cleaning{
+    background-color: rgb(60 108 108);
+    color: white;
+}
+.others{
+    background-color: brown;
+    color: white;
+}
