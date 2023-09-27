@@ -4,6 +4,9 @@
     "express": "^4.18.2",
     "mongoose": "^7.4.1"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "name": "to-do-app",
   "version": "1.0.0",
   "description": "to do app",
