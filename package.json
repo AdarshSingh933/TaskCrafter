@@ -7,9 +7,6 @@
   "engines": {
     "node": ">=14.20.1"
   },
-  "engines": {
-    "node": ">=14.20.1"
-  },
   "name": "to-do-app",
   "version": "1.0.0",
   "description": "to do app",
